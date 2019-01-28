@@ -15,3 +15,11 @@ def getNativiaAPIURL():
 def getDBTimetableAPIURL():
     db_timetable_api_url = "https://api.deutschebahn.com/timetables/v1/"
     return db_timetable_api_url
+
+def getBlablacarAPIURL():
+    blablacar_api_url = "https://public-api.blablacar.com/api/v2/"
+    return blablacar_api_url
+
+def getOpenBahnAPIURL():
+    openbahn_api_url = ""
+    return openbahn_api_url
