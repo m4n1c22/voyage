@@ -59,7 +59,7 @@ class Voyage_Carpool:
     def __init__(self, auth_obj):
         self.auth_obj = auth_obj
 
-    def checkAvailableRides(self, source="Bonn", destination="Darmstadt",begin_date="2019-01-28",end_date="2019-02-01",number_of_seats=1):
+    def checkAvailableRides(self, source="Bonn", destination="Darmstadt",begin_date="2019-02-02",end_date="2019-02-11",number_of_seats=1):
         api_url = common.getBlablacarAPIURL()
         request_url = api_url+"trips?fn="+source+"&tn="+destination+"&_format=json&cur=EUR&db="+begin_date+"&de="+end_date+"&seats="+str(number_of_seats)
         print (request_url)
