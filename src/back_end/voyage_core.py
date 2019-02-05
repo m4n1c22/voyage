@@ -62,7 +62,7 @@ class Voyage_Carpool:
     def checkAvailableRides(self, source="Bonn", destination="Darmstadt",begin_date="2019-02-02",end_date="2019-02-11",number_of_seats=1):
         api_url = common.getBlablacarAPIURL()
         request_url = api_url+"trips?fn="+source+"&tn="+destination+"&_format=json&cur=EUR&db="+begin_date+"&de="+end_date+"&seats="+str(number_of_seats)
-        print (request_url)
+        #print (request_url)
         response = requests.get(request_url, headers=self.auth_obj.header,verify=False)
 
         trips = response.json()["trips"]
@@ -72,5 +72,7 @@ class Voyage_Carpool:
             ride = {}
             ride["from"] = trip["departure_place"]["address"]
             ride["to"] = trip["arrival_place"]["address"]
+            ride["departure_date"] = trip["departure_date"]
             avail_rides.append(ride)
-        print avail_rides
+        #print avail_rides
+        return avail_rides
