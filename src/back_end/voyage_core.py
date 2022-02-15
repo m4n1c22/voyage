@@ -73,6 +73,7 @@ class Voyage_Carpool:
             ride["from"] = trip["departure_place"]["address"]
             ride["to"] = trip["arrival_place"]["address"]
             ride["departure_date"] = trip["departure_date"]
+            ride["price"]=trip["price"]["string_value"]
             avail_rides.append(ride)
         #print avail_rides
         return avail_rides

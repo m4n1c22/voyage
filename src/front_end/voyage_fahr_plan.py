@@ -20,4 +20,4 @@ def my_form_post():
     car_pool_obj = Car_Pool_Controller()
     avail_rides = car_pool_obj.checkAvailableRides(voyage_src, voyage_dest, begin_date, end_date)
     processed_text = str(avail_rides)
-    return processed_text
+    return processed_text + "<h1>Heading</h1>"
